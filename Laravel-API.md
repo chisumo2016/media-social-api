@@ -50,4 +50,12 @@
         Update the user with laravel sanctumtoken
         Show the user with token
 
+## Laravel Sanctum with Vue 3 and Axios to login
+    - Objective is to hook the frontend with backend 
+    - Hook with the front end social media network.
 
+     PLEASE CROSSS CHECK WITH BACKEND NOTES 
+    - php artisan migaret:reset 
+    - Add a new column to existing users migrations
+            php artisan make:migration add_description_to_users_table --table=users 
+            $table->integer('paid')->after('whichever_column');
