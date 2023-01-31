@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->group(function (){
     Route::post('/logout' , [\App\Http\Controllers\API\AuthController::class, 'logout']);
 
-    Route::get('/users/{id}' , [\App\Http\Controllers\API\userController::class, 'show']);
-    Route::put('/users/{id}' , [\App\Http\Controllers\API\userController::class, 'update']);
+    //Route::apiResource('users',\App\Http\Controllers\API\userController::class);
+    Route::get('users/{id}' , [\App\Http\Controllers\API\userController::class, 'show']);
+    Route::put('users/{id}' , [\App\Http\Controllers\API\userController::class, 'update']);
 
     Route::get('inside-middleware', function (){
         return response()->json('Success' , 200);

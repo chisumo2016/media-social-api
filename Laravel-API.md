@@ -59,3 +59,17 @@
     - Add a new column to existing users migrations
             php artisan make:migration add_description_to_users_table --table=users 
             $table->integer('paid')->after('whichever_column');
+
+## Laravel Intervention Image Tutorial (Laravel file Upload)
+    - The objectives of this topic is to be able to upload our image to our Edit Page .
+    - Let us make our image Service
+    - Let us open the laravel backend .
+    - app -> create a folder called Services (app/Services/ImageService.php)
+    - Install the Laravel Intervention Package
+        https://image.intervention.io/v2/introduction/installation#integration-in-laravel
+             composer require intervention/image
+    - Write all logic to create an image inside the ImageService class
+    - To user the  Image Service Open the user Controller in update()
+        add the if(){}
+    - Just back to our front end application
+        
