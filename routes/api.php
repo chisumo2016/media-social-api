@@ -24,6 +24,8 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::post('songs' , [\App\Http\Controllers\API\SongController::class, 'store']);
     Route::post('songs/{id}/{user_id}' , [\App\Http\Controllers\API\SongController::class, 'delete']);
 
+    Route::get('user/{user_id}/songs' , [\App\Http\Controllers\API\SongsByUserController::class, 'index']);
+
     Route::get('inside-middleware', function (){
         return response()->json('Success' , 200);
     });
