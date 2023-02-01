@@ -128,8 +128,25 @@
     - Open SongsSection.vue file  do we can output /loop the songs
     - Open SongPlaye.vue file  do we can output /loop the songs
             add all the logic to loop the songs
-    - Save all the image into backennd and user pini to show it
+        - Save all the image into backend and user pini to show it
+    - TEST THE APPLICATION BY ADD NEW SONG  PASSED
 
-    
+### Delete MP3 File from Laravel API and Install SweetAlert2 in Vue 3
+    - Objective is to delete the Song from the database and show the SweetAlerts
+    - Go to backend  and add the logic to delete (){} in SongController
+            Add all logics 
+    - Add the API route to delete the songs
+    - Open FRONT END Application
+    - Open the DeleteSongs vue file
+
+        * Put all logic into script 
+    - Loop the in file v-for=""
+    - add the useUserStore
+    - Add the sweeetAlert2
+    - TEST APPLICATION: PASSES
+    - Let Go back to AddSong vvue file
+        add the redirect to accout-profile
+    - Open the SongPlayer ,take the thePlayer() and putt after for loop
+
 
 
