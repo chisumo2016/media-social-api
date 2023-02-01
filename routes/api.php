@@ -26,6 +26,10 @@ Route::middleware('auth:sanctum')->group(function (){
 
     Route::get('user/{user_id}/songs' , [\App\Http\Controllers\API\SongsByUserController::class, 'index']);
 
+    Route::get('youtube/{user_id}', [\App\Http\Controllers\API\VideoController::class, 'show']);
+    Route::post('youtube', [\App\Http\Controllers\API\VideoController::class, 'store']);
+    Route::delete('youtube/{id}', [\App\Http\Controllers\API\VideoController::class, 'destroy']);
+
     Route::get('inside-middleware', function (){
         return response()->json('Success' , 200);
     });

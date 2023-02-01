@@ -148,5 +148,34 @@
         add the redirect to accout-profile
     - Open the SongPlayer ,take the thePlayer() and putt after for loop
 
+### Video save with Vue 3, Pinia, and Laravel API
+    - Objective is to be able to Save the vide into data base vvia Laravel API and Pinia.
+    - Functionality to send a request to backend(laravel) via store method.
+    - We can get songs by user_id as column
+    -Add the Validation
+    -State Management to store video
+    - Has on the backend of Video we  need to generate model, migration ,  and controller
+    - Create a Model , Migration , controller and resource for our songs
+        php artisan make:model Video -mc --resource 
+    - Add data modelling inside the migration
+        php artisan migrate  
+    - Put the VideoController inside the API 
+    - Add the route for youtube
+    - Make a customs request validation for our Youtube
+        php artisan make:request Song/StoreSongRequest 
+    - Add the Mass Assigment 
+    - Implement three login inssidee video controller
+    - Create a env("YT_EMBED_URL") in .env
+    -
+
+
+
+
+
+
+
+
+
+
 
 
