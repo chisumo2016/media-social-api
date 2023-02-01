@@ -72,4 +72,25 @@
     - To user the  Image Service Open the user Controller in update()
         add the if(){}
     - Just back to our front end application
-        
+
+## Profile Info with Pinia and Vue
+    - Objective is to make our profile functional for one user.
+    - Open the ProfileSection.vue file, display all the informarion on the screen
+    - Add the logic to both part to display infoormation ProfileSection.vue and ProfileAboutSSection
+
+### Laravel File Upload with Vue 3 | Axios | Add Song
+    - Objective for this section is to be able to add the Songs
+    - Functionality to send a request to backend(laravel) via store method.
+    - We can get songs by user_id
+    -Add the Validation
+    -State Management
+    - Create a Model , Migration , controller and resource for our songs
+        php artisan make:model Song -mc --resource 
+        php artisan migrate   
+    - Upload the MP3 files as upload  via store() method
+    - Make a custooms request
+        php artisan make:request Song/StoreSongRequest 
+    - Add the functionality to delete the song
+    - Add the api point in api route file
+    - Add a folder in public called songs
+    - Jump to front end of VUE Application

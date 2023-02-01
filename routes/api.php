@@ -21,6 +21,9 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::get('users/{id}' , [\App\Http\Controllers\API\userController::class, 'show']);
     Route::put('users/{id}' , [\App\Http\Controllers\API\userController::class, 'update']);
 
+    Route::post('songs' , [\App\Http\Controllers\API\SongController::class, 'store']);
+    Route::post('songs/{id}/{user_id}' , [\App\Http\Controllers\API\SongController::class, 'delete']);
+
     Route::get('inside-middleware', function (){
         return response()->json('Success' , 200);
     });
