@@ -166,7 +166,9 @@
     - Add the Mass Assigment 
     - Implement three login inssidee video controller
     - Create a env("YT_EMBED_URL") in .env
-    -
+    - Finish all logic to implement on VideoController
+    - TEST THE APPPLICATION VIA POSTMAN
+    - MOVE TO FRONT APPLICATION VUE
 
 
 
