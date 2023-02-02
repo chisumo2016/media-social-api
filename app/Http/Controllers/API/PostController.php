@@ -13,7 +13,7 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index()
     {
@@ -41,7 +41,7 @@ class PostController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \App\Http\Requests\Post\StorePostRequest  $request
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function store(StorePostRequest $request)
     {
@@ -52,11 +52,12 @@ class PostController extends Controller
 
             $post = new Post;
 
-            (new ImageService)->updateImage($post, $request, '/images/posts/', 'store');
+           (new ImageService)->updateImage($post, $request, '/images/posts/', 'store');
 
-            $post->title = $request->get('title');
-            $post->location = $request->get('location');
-            $post->description = $request->get('description');
+            $post->user_id        = $request->get('user_id');
+            $post->title        = $request->get('title');
+            $post->location     = $request->get('location');
+            $post->description  = $request->get('description');
 
             $post->save();
 
@@ -74,7 +75,8 @@ class PostController extends Controller
      * Display the specified resource.
      *
      * @param int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
+     *
      */
     public function show(int $id)
     {
@@ -96,7 +98,7 @@ class PostController extends Controller
      *
      * @param  \App\Http\Requests\Post\UpdatePostRequest  $request
      * @param  int $id
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(Request $request, int $id)
     {

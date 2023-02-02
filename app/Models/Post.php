@@ -14,7 +14,7 @@ class Post extends Model
         'image',
         'title',
         'description',
-        'loaction',
+        'location',
     ];
 
     /**

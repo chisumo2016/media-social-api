@@ -178,13 +178,16 @@
     -Add the Validation request 
         php artissan make:request Post/StorePostRequest      
         php artisan make:request Post/UpdatePostRequest 
+    - Add data modelling inside the migration
+        php artisan migrate:rollback
+        php artisan migrate
     - Inject into PostController in both store and update method
     - Setup the relationship
     - Add the Mass Assigment 
     - Implement all logic for both methods
     - Add the api route for posts
-     - Add data modelling inside the migration
-        php artisan migrate 
+     REMEMBER: IMAGE GET SAVED FIRST FOLLOWED OTHER FIELD
+      FINISH THE BACKEND 
  
 
 
