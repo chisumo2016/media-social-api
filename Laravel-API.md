@@ -170,6 +170,23 @@
     - TEST THE APPPLICATION VIA POSTMAN
     - MOVE TO FRONT APPLICATION VUE
 
+## Vue 3 and Laravel API CRUD | Laravel CRUD | Posts Section
+    - Objectives of this section is to be able to CRUD the Post
+    - Create a Model , Migration , controller and resource for our songs
+        php artisan make:model Post -mc --resource 
+    - Put the VideoController inside the API 
+    -Add the Validation request 
+        php artissan make:request Post/StorePostRequest      
+        php artisan make:request Post/UpdatePostRequest 
+    - Inject into PostController in both store and update method
+    - Setup the relationship
+    - Add the Mass Assigment 
+    - Implement all logic for both methods
+    - Add the api route for posts
+     - Add data modelling inside the migration
+        php artisan migrate 
+ 
+
 
 
 
