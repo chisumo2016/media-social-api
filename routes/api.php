@@ -36,6 +36,8 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::put('posts/{id}',    [\App\Http\Controllers\API\PostController::class, 'update']);
     Route::delete('posts/{id}', [\App\Http\Controllers\API\PostController::class, 'destroy']);
 
+    Route::get('user/{user_id}/posts' , [\App\Http\Controllers\API\PostByUserController::class, 'show']);
+
     Route::get('inside-middleware', function (){
         return response()->json('Success' , 200);
     });
